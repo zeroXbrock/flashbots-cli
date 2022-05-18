@@ -3,10 +3,10 @@
 Flashbots CLI Tool
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/flashbots-cli)
-[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/zeroXbrock/flashbots-cli/tree/main)
+[![Version](https://img.shields.io/npm/v/flashbots-cli.svg)](https://npmjs.org/package/flashbots-cli)
+[![CircleCI](https://circleci.com/gh/zeroXbrock/flashbots-cli/tree/main.svg?style=shield)](https://circleci.com/gh/zeroXbrock/flashbots-cli/tree/main)
 [![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/flashbots-cli)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/zeroXbrock/flashbots-cli/blob/main/package.json)
+[![License](https://img.shields.io/npm/l/flashbots-cli.svg)](https://github.com/zeroXbrock/flashbots-cli/blob/main/package.json)
 
 ## install
 
