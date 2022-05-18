@@ -34,7 +34,7 @@ export default class BundleCache extends Command {
       // add tx to bundle
       const provider = new providers.JsonRpcProvider(`${FLASHBOTS_PROTECT_URL}?bundle=${args.bundle_id}`)
       const res = await provider.sendTransaction(args.raw_tx)
-      this.log(res.toString())
+      this.log(JSON.stringify(res))
       this.log(`Cached tx in bundle ${args.bundle_id}`)
     } else {
       // get bundle
