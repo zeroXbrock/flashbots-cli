@@ -6,22 +6,22 @@ jobs:
   build:
     executor:
       name: node/default
-      tag: '10.4'
+      tag: '16.1'
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
       - run: npm run test
-workflows:
-  version: 2
-  dependabot-automerge:
-    triggers:
-      - schedule:
-          cron: '0 2,5,8,11 * * *'
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - release-management/dependabot-automerge
+# workflows:
+#   version: 2
+#   dependabot-automerge:
+#     triggers:
+#       - schedule:
+#           cron: '0 2,5,8,11 * * *'
+#           filters:
+#             branches:
+#               only:
+#                 - main
+#     jobs:
+#       - release-management/dependabot-automerge
