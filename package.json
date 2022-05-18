@@ -1,6 +1,6 @@
 {
   "name": "flashbots-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Flashbots CLI tool.",
   "author": "zeroXbrock",
   "bin": {
@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "@oclif/test": "^2",
-    "@types/": "oclif/core",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.4",
