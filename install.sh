@@ -14,11 +14,12 @@ aliasStmt="alias flashbots=\"${installLocation}/bin/run\""
 if [ -f ~/.zshrc ]; then
    # assume Zsh
    echo $aliasStmt >> ~/.zshrc
-   . ~/.zshrc
+   sourceStmt='source ~/.zshrc'
+   echo "Reload your terminal or run `source ~/.zshrc` to load flashbots-cli"
 elif [ -f ~/.bashrc ]; then
    # assume Bash
    echo $aliasStmt >> ~/.bashrc
-   . ~/.bashrc
+   echo "Reload your terminal or run `source ~/.bashrc` to load flashbots-cli"
 else
    # assume something else
    echo "Couldn't find your terminal profile (.zshrc or .bashrc)."
