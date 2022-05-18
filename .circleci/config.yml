@@ -1,20 +1,20 @@
 ---
 version: 2.1
-
+orbs:
+  node: circleci/node@4.7.0
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: '10.4'
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+      - run: npm run test
 workflows:
   version: 2
-  test-and-release:
-    jobs:
-      - release-management/test-package:
-          matrix:
-            parameters:
-              os:
-                - linux
-                - windows
-              node_version:
-                - latest
-                - lts
-                - maintenance
   dependabot-automerge:
     triggers:
       - schedule:
