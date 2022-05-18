@@ -11,7 +11,14 @@ Flashbots CLI Tool
 ## install
 
 ```sh
-npm install -g flashbots-cli
+# if you use zsh
+curl https://raw.githubusercontent.com/zeroXbrock/flashbots-cli/main/install.sh | /bin/zsh
+
+# if you use bash
+curl https://raw.githubusercontent.com/zeroXbrock/flashbots-cli/main/install.sh | /bin/bash
+
+# soon:
+# npm install -g flashbots-cli
 ```
 
 ## use

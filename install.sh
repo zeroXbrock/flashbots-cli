@@ -28,4 +28,4 @@ else
    echo $aliasStmt
 fi
 
-echo "All done. Run 'flashbots' to see a list of commands."
+echo "Run 'flashbots' to see a list of commands."
