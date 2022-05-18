@@ -19,10 +19,10 @@ export default class SendBundle extends Command {
 
   static flags = {
     'auth-signer': Flags.string({char: 'a', description: 'Private key to sign bundle'}),
-    'target-block': Flags.integer({char: 'b', description: 'Block to target for bundle submission'}),
+    'target-block': Flags.integer({char: 'b', description: 'Block to target for bundle submission (default latest+1)'}),
     'min-timestamp': Flags.integer({description: 'Minimum timestamp at which this bundle can be included'}),
     'max-timestamp': Flags.integer({description: 'Maximum timestamp at which this bundle can be included'}),
-    'reverting-tx': Flags.string({description: 'Tx hash that is allowed to revert. This flag can be set multiple times', multiple: true}),
+    'reverting-tx': Flags.string({description: 'Tx hash that is allowed to revert, can be set multiple times', multiple: true}),
   }
 
   static args = [{name: 'bundle_txs', description: 'JSON string-encoded array of raw signed transactions (0x-prefixed)', required: true}]

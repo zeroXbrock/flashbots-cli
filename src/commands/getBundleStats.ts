@@ -8,7 +8,8 @@ export default class GetBundleStats extends Command {
   static description = 'Get info about a bundle.'
 
   static examples = [
-    '<%= config.bin %> <%= command.id %> 0x47b1f5ea1b924acd88459b2e4f0ccfd2326ca0a134b982c1bc4a97e9002ff051',
+`# Get bundle stats for block 14798035
+<%= config.bin %> <%= command.id %> 0x47b1f5ea1b924acd88459b2e4f0ccfd2326ca0a134b982c1bc4a97e9002ff051 14798035`,
   ]
 
   static args = [

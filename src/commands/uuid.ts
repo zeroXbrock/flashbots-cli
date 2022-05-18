@@ -7,10 +7,6 @@ import { handleGenericError } from '../lib/error'
 export default class Uuid extends Command {
   static description = 'Generate a random UUID.'
 
-  static examples = [
-    '<%= config.bin %> <%= command.id %>',
-  ]
-
   async catch(e: any) {
     handleGenericError(e, this)
   }

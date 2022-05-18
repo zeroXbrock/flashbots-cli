@@ -8,12 +8,12 @@ export default class SimulateBundle extends Command {
   static description = 'Simulate a bundle.'
 
   static examples = [
-    `# Simulate a bundle in the current block
-    <%= config.bin %> <%= command.id %> '["0x02f8d37c496de...", "0x02f8d38a7bf47..."]'`,
-    `# Simulate a bundle against a specific timestamp
-    <%= config.bin %> <%= command.id %> '["0x02f8d37c496de...", "0x02f8d38a7bf47..."]' --block-timestamp 1652859017`,
-    `# Simulate a bundle against a block tag
-    <%= config.bin %> <%= command.id %> '["0x02f8d37c496de...", "0x02f8d38a7bf47..."]' --state-block-tag latest`,
+`# Simulate a bundle in the current block
+<%= config.bin %> <%= command.id %> '["0x02f8d37c496de...", "0x02f8d38a7bf47..."]'`,
+`# Simulate a bundle against a specific timestamp
+<%= config.bin %> <%= command.id %> '["0x02f8d37c496de...", "0x02f8d38a7bf47..."]' --block-timestamp 1652859017`,
+`# Simulate a bundle against a block tag
+<%= config.bin %> <%= command.id %> '["0x02f8d37c496de...", "0x02f8d38a7bf47..."]' --state-block-tag latest`,
   ]
 
   static flags = {
