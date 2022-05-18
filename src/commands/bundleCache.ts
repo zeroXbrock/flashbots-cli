@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Command, Flags } from '@oclif/core'
+import { Command } from '@oclif/core'
 import { providers } from 'ethers'
 
 // lib
@@ -18,13 +18,6 @@ export default class BundleCache extends Command {
 <%= config.bin %> <%= command.id %> 5b479f88-01ca`,
   ]
 
-  static flags = {
-    // flag with a value (-n, --name=VALUE)
-    // name: Flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-g, --get)
-    // get: Flags.boolean({char: 'g'}),
-  }
-
   static args = [
     {name: 'bundle_id', required: true, description: 'Unique ID to identify your bundle (UUIDv4 recommended)'}, 
     {name: 'raw_tx', description: 'Raw signed transaction (0x-prefixed hex data)'}
@@ -35,7 +28,7 @@ export default class BundleCache extends Command {
   }
 
   public async run(): Promise<void> {
-    const {args, flags} = await this.parse(BundleCache)
+    const {args} = await this.parse(BundleCache)
 
     if (args.raw_tx) {
       // add tx to bundle
