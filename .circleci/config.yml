@@ -1,27 +1,19 @@
 ---
 version: 2.1
 orbs:
-  node: circleci/node@4.7.0
+  node: circleci/node@5.0.2
 jobs:
-  build:
-    executor:
-      name: node/default
-      tag: '16.1'
+  install-node-example:
+    docker:
+      - image: 'cimg/base:stable'
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-      - run: npm run test
-# workflows:
-#   version: 2
-#   dependabot-automerge:
-#     triggers:
-#       - schedule:
-#           cron: '0 2,5,8,11 * * *'
-#           filters:
-#             branches:
-#               only:
-#                 - main
-#     jobs:
-#       - release-management/dependabot-automerge
+      - node/install:
+          install-yarn: true
+          node-version: '16.1'
+      - run: node --version
+      - run: yarn build
+workflows:
+  test_my_app:
+    jobs:
+      - install-node-example
