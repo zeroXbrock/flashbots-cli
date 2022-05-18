@@ -9,6 +9,6 @@ export default class Uuid extends Command {
   ]
 
   public async run(): Promise<void> {
-    console.log(randomUUID())
+    this.log(randomUUID())
   }
 }
