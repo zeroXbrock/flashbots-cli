@@ -55,7 +55,7 @@ flashbots --help [COMMAND]
 
 ### bundle cache
 
-Add first transaction to bundle:
+**Add first transaction to bundle:**
 
 ```sh
 $ flashbots bundleCache cd8578e0-7c7a-40ce-b60d-190f084a87ee
@@ -69,7 +69,7 @@ Result:
 Cached tx in bundle cd8578e0-7c7a-40ce-b60d-190f084a87ee
 ```
 
-Add second tranaction to bundle:
+**Add second tranaction to bundle:**
 
 ```sh
 flashbots bundleCache cd8578e0-7c7a-40ce-b60d-190f084a87ee 0xf8700a851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba0ef7bdce42d5e3c8ef515d1afaafecd952ac1f2adc97f1c3a76807a0b9ac21784a03a5589f444cf5e5b09456ab599544ac6a6e831fd6a1e9c0b596db0a3cc085edb
@@ -82,7 +82,7 @@ Result:
 Cached tx in bundle cd8578e0-7c7a-40ce-b60d-190f084a87ee
 ```
 
-Get entire cached bundle:
+**Get entire cached bundle:**
 
 ```sh
 flashbots bundleCache cd8578e0-7c7a-40ce-b60d-190f084a87ee
