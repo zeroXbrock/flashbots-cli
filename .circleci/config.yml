@@ -10,7 +10,7 @@ jobs:
       - node/install:
           install-yarn: true
           node-version: '16.13'
-      - run: node --version
+      - run: yarn build
 workflows:
   test_my_app:
     jobs:
