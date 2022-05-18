@@ -7,7 +7,7 @@ import { FLASHBOTS_PROTECT_URL } from '../lib/constants'
 import { handleGenericError } from '../lib/error'
 
 export default class BundleCache extends Command {
-  static description = `Interact with the Flashbots Bundle Cache API. 
+  static description = `Add txs to a bundle one at a time. 
   Specify [BUNDLE_ID] AND [RAW_TX] to add a new transaction to a bundle. 
   To get the current cached bundle, only set [BUNDLE_ID].`
 

@@ -3,7 +3,7 @@ import { handleGenericError } from '../lib/error'
 import { getFlashbotsProvider, getStandardProvider } from '../lib/flashbots'
 
 export default class SimulateBundle extends Command {
-  static description = 'Simulate a Flashbots bundle.'
+  static description = 'Simulate a bundle.'
 
   static examples = [
     `# Simulate a bundle in the current block
