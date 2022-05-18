@@ -10,15 +10,27 @@ Flashbots CLI Tool
 
 ## install
 
+### via npm (global install)
+
+```sh
+npm install -g flashbots-cli@latest
+flashbots --help
+```
+
+### via npx (one-off usage)
+
+```sh
+npx flashbots-cli@latest --help
+```
+
+### install from source (hacker mode)
+
 ```sh
 # if you use zsh
 curl https://raw.githubusercontent.com/zeroXbrock/flashbots-cli/main/install.sh | /bin/zsh
 
 # if you use bash
 curl https://raw.githubusercontent.com/zeroXbrock/flashbots-cli/main/install.sh | /bin/bash
-
-# soon:
-# npm install -g flashbots-cli
 ```
 
 ## use
@@ -31,7 +43,7 @@ flashbots --help
 Flashbots CLI tool.
 
 VERSION
-  flashbots-cli/0.0.0 linux-x64 node-v16.1.0
+  flashbots-cli/x.y.z linux-x64 node-v16.1.0
 
 USAGE
   $ flashbots [COMMAND]
