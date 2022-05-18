@@ -1,7 +1,7 @@
-oclif-hello-world
+flashbots-cli
 =================
 
-oclif example Hello World CLI
+Flashbots CLI Tool
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
@@ -13,14 +13,20 @@ oclif example Hello World CLI
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
-```sh-session
+```sh
 $ npm install -g flashbots-cli
-$ flashbots COMMAND
-running command...
-$ flashbots (--version)
+
+$ flashbots bundleCache 5b479f88-01ca-4c1b-a1b9-1299ce969590
+
+{"bundleId":"5b479f88-01ca-4c1b-a1b9-1299ce969590","rawTxs":["0x02f8d30182024b8459682f008506fac1dc58830101ab9457f1887a8bf19b14fc0df6fd9b2acc9af147ea8580b86442842e0e000000000000000000000000dd8e2548da5a992a63ae5520c6bc92c37a2bcc440000000000000000000000004ce2dd8373ece0d7baaa16e559a5817cc875b16a9599e485a199727c7f9567e87c496de855dcb2952d6aa9fc069ad1ed21b0c0c4c001a07151f708ff5d6ea159d99189fb25c6d4483d1ef03f86c9b1fc39a7a3d06f8c42a004a7f3113b30b2dfc87180f8381883d4553e84b402448144ffae579f8c702cb3"]}
+
+$ flashbots --version
 flashbots-cli/0.0.0 linux-x64 node-v16.1.0
+
 $ flashbots --help [COMMAND]
 USAGE
   $ flashbots COMMAND
