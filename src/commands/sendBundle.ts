@@ -1,4 +1,6 @@
 import { Command, Flags } from '@oclif/core'
+
+// lib
 import { handleGenericError } from '../lib/error'
 import { getFlashbotsProvider, getStandardProvider } from '../lib/flashbots'
 

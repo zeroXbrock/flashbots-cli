@@ -1,4 +1,6 @@
 import { Command, Flags } from '@oclif/core'
+
+// lib
 import { handleGenericError } from '../lib/error'
 import { getFlashbotsProvider, getStandardProvider } from '../lib/flashbots'
 
@@ -21,7 +23,7 @@ export default class SimulateBundle extends Command {
   }
 
   static args = [
-    {name: 'bundle_txs', required: true, description: "JSON string-encoded array of raw signed transactions (0x-prefixed)"},
+    {name: 'bundle_txs', description: "JSON string-encoded array of raw signed transactions (0x-prefixed)", required: true},
   ]
 
   async catch(e: any) {

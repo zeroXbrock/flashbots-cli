@@ -19,7 +19,7 @@ export default class BundleCache extends Command {
   ]
 
   static args = [
-    {name: 'bundle_id', required: true, description: 'Unique ID to identify your bundle (UUIDv4 recommended)'}, 
+    {name: 'bundle_id', description: 'Unique ID to identify your bundle (UUIDv4 recommended)', required: true}, 
     {name: 'raw_tx', description: 'Raw signed transaction (0x-prefixed hex data)'}
   ]
 

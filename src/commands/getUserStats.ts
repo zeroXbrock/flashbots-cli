@@ -1,4 +1,7 @@
-import {Command, Flags} from '@oclif/core'
+import { Command } from '@oclif/core'
+
+// lib
+import { handleGenericError } from '../lib/error'
 import { getFlashbotsProvider } from '../lib/flashbots'
 
 export default class GetUserStats extends Command {
@@ -9,7 +12,11 @@ export default class GetUserStats extends Command {
     '<%= config.bin %> <%= command.id %> 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80',
   ]
 
-  static args = [{name: 'signer_key', description: "Private key used to sign bundles"}]
+  static args = [{name: 'signer_key', description: "Private key used to sign bundles", required: true}]
+  
+  async catch(e: any) {
+    handleGenericError(e, this)
+  }
 
   public async run(): Promise<void> {
     const {args} = await this.parse(GetUserStats)
