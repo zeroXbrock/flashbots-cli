@@ -110,3 +110,19 @@ Result:
 ```txt
 {"bundleId":"cd8578e0-7c7a-40ce-b60d-190f084a87ee","rawTxs":["0xf8700a851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba0ef7bdce42d5e3c8ef515d1afaafecd952ac1f2adc97f1c3a76807a0b9ac21784a03a5589f444cf5e5b09456ab599544ac6a6e831fd6a1e9c0b596db0a3cc085edb","0xf87009851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba026314be2b42cda8015133376447bd6ab93bc08d367fe7d1b57f270256f5e5e04a00595467676caa58aacc709a4c1c987cf2f18f10a527797c4730e23a320d034ce"]}
 ```
+
+## features
+
+- [x] bundleCache
+- [x] getBundleStats
+- [x] getConflictingBundle
+- [x] getUserStats
+- [x] sendBundle
+- [x] simulateBundle
+- [x] uuid
+- [ ] Goerli support
+- [ ] sendPrivateTransaction 
+  - [ ] fast mode option
+- [ ] cancelPrivateTransaction`
+
+Got a big 🧠 idea? Drop it in the [issues](https://github.com/zeroXbrock/flashbots-cli/issues) and tag the maintainer!
