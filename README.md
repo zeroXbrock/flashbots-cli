@@ -8,6 +8,8 @@ Flashbots CLI Tool
 [![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/flashbots-cli)
 [![License](https://img.shields.io/npm/l/flashbots-cli.svg)](https://github.com/zeroXbrock/flashbots-cli/blob/main/package.json)
 
+`flashbots-cli` is a quick-and-easy solution for interacting with the flashbots relay. All methods implemented in the [`ethers-provider-flashbots-bundle`](https://github.com/flashbots/ethers-provider-flashbots-bundle) project are implemented here (and more coming soon).
+
 ## install
 
 ### via npm (global install)
@@ -40,8 +42,14 @@ curl https://raw.githubusercontent.com/zeroXbrock/flashbots-cli/main/install.sh 
 ## use
 
 ```sh
-flashbots --help
+# flashbots
+# flashbots help
+# flashbots --help
+
+flashbots help
 ```
+
+Result:
 
 ```txt
 Flashbots CLI tool.
@@ -63,8 +71,52 @@ COMMANDS
   uuid                  Generate a random UUID.
 ```
 
+Get command usage
+
 ```sh
-flashbots --help [COMMAND]
+# flashbots help [COMMAND]
+# flashbots --help [COMMAND]
+# flashbots [COMMAND] --help
+
+flashbots simulateBundle --help
+```
+
+Result
+
+```txt
+Simulate a bundle.
+
+USAGE
+  $ flashbots simulateBundle [BUNDLE_TXS] [-b <value>] [--state-block-tag
+    <value>] [--block-timestamp <value>]
+
+ARGUMENTS
+  BUNDLE_TXS  JSON string-encoded array of raw signed transactions (0x-prefixed)
+
+FLAGS
+  -b, --target-block=<value>  Block to target for bundle submission
+  --block-timestamp=<value>   Timestamp to execute simulation against
+  --state-block-tag=<value>   Block tag which specifies block state to execute
+                              simulation against
+
+DESCRIPTION
+  Simulate a bundle.
+
+EXAMPLES
+  # Simulate a bundle in the current block
+
+    $ flashbots simulateBundle '["0x02f8d37c496de...", \
+      "0x02f8d38a7bf47..."]'
+
+  # Simulate a bundle against a specific timestamp
+
+    $ flashbots simulateBundle '["0x02f8d37c496de...", \
+      "0x02f8d38a7bf47..."]' --block-timestamp 1652859017
+
+  # Simulate a bundle against a block tag
+
+    $ flashbots simulateBundle '["0x02f8d37c496de...", \
+      "0x02f8d38a7bf47..."]' --state-block-tag latest
 ```
 
 ## examples
