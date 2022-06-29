@@ -1,6 +1,6 @@
 {
   "name": "flashbots-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Flashbots CLI tool.",
   "author": "zeroXbrock",
   "bin": {
