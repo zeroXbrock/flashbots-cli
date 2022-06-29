@@ -67,7 +67,9 @@
   },
   "bugs": "https://github.com/zeroXbrock/flashbots-cli/issues",
   "keywords": [
-    "flashbots", "oclif", "cli"
+    "flashbots",
+    "oclif",
+    "cli"
   ],
   "types": "dist/index.d.ts"
 }
