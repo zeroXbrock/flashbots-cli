@@ -275,8 +275,7 @@ Result:
 `getUserStats` retrieves Flashbots reputation information about an account you control.
 
 ```sh
-export FB_AUTH_SIGNER=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
-
+# using FB_AUTH_SIGNER from environment
 flashbots getUserStats
 ```
 
