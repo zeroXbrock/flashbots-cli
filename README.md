@@ -141,7 +141,7 @@ flashbots bundleCache $bundleId $tx1
 
 Result:
 
-```txt
+```json
 {"nonce":9,"gasPrice":{"type":"BigNumber","hex":"0x1010b87200"},"gasLimit":{"type":"BigNumber","hex":"0x010d88"},"to":"0xeAa314Eb4Cc5A16458B17a94e759252f4FDA9eA4","value":{"type":"BigNumber","hex":"0x00"},"data":"0x6c617a792077616e6b6572","chainId":0,"v":27,"r":"0x26314be2b42cda8015133376447bd6ab93bc08d367fe7d1b57f270256f5e5e04","s":"0x0595467676caa58aacc709a4c1c987cf2f18f10a527797c4730e23a320d034ce","from":"0x13babe07e11ff6f2276B97735131c867D793615b","hash":"0x84809aa44167e877b4b95f74b4b7f022ce04114be0c37f39ca858c438abbfb75","type":null,"confirmations":0}
 Cached tx in bundle cd8578e0-7c7a-40ce-b60d-190f084a87ee
 ```
@@ -157,7 +157,7 @@ flashbots bundleCache $bundleId $tx2
 
 Result:
 
-```txt
+```json
 {"nonce":10,"gasPrice":{"type":"BigNumber","hex":"0x1010b87200"},"gasLimit":{"type":"BigNumber","hex":"0x010d88"},"to":"0xeAa314Eb4Cc5A16458B17a94e759252f4FDA9eA4","value":{"type":"BigNumber","hex":"0x00"},"data":"0x6c617a792077616e6b6572","chainId":0,"v":27,"r":"0xef7bdce42d5e3c8ef515d1afaafecd952ac1f2adc97f1c3a76807a0b9ac21784","s":"0x3a5589f444cf5e5b09456ab599544ac6a6e831fd6a1e9c0b596db0a3cc085edb","from":"0x13babe07e11ff6f2276B97735131c867D793615b","hash":"0x5346ddf789eb33c2e0a07bacbc53cf3f0766608b50cefcea64684586a650b6aa","type":null,"confirmations":0}
 Cached tx in bundle cd8578e0-7c7a-40ce-b60d-190f084a87ee
 ```
@@ -187,7 +187,7 @@ flashbots getBundleStats $bundleHash $targetBlock
 
 Result:
 
-```txt
+```json
 {
   "isSimulated": true,
   "isSentToMiners": true,
@@ -211,7 +211,7 @@ flashbots getConflictingBundle $signedTxs $targetBlock
 
 Result:
 
-```txt
+```json
 {
   "conflictType": FlashbotsBundleConflictType.NonceCollision,
   "initialSimulation": {
@@ -289,12 +289,9 @@ flashbots sendBundle $signedTxs
 
 Result:
 
-```txt
+```json
 Targeting block 14802559 for bundle submission.
-bundle txs [
-  '0xf87009851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba026314be2b42cda8015133376447bd6ab93bc08d367fe7d1b57f270256f5e5e04a00595467676caa58aacc709a4c1c987cf2f18f10a527797c4730e23a320d034ce',
-  '0xf8700a851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba0ef7bdce42d5e3c8ef515d1afaafecd952ac1f2adc97f1c3a76807a0b9ac21784a03a5589f444cf5e5b09456ab599544ac6a6e831fd6a1e9c0b596db0a3cc085edb'
-]
+
 {"bundleTransactions":[{"signedTransaction":"0xf87009851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba026314be2b42cda8015133376447bd6ab93bc08d367fe7d1b57f270256f5e5e04a00595467676caa58aacc709a4c1c987cf2f18f10a527797c4730e23a320d034ce","hash":"0x84809aa44167e877b4b95f74b4b7f022ce04114be0c37f39ca858c438abbfb75","account":"0x13babe07e11ff6f2276B97735131c867D793615b","nonce":9},{"signedTransaction":"0xf8700a851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba0ef7bdce42d5e3c8ef515d1afaafecd952ac1f2adc97f1c3a76807a0b9ac21784a03a5589f444cf5e5b09456ab599544ac6a6e831fd6a1e9c0b596db0a3cc085edb","hash":"0x5346ddf789eb33c2e0a07bacbc53cf3f0766608b50cefcea64684586a650b6aa","account":"0x13babe07e11ff6f2276B97735131c867D793615b","nonce":10}],"bundleHash":"0x57b0f5e51b924a9d88a59b2d4f0c4fd2c26c80a130d982c9bc4e97d3001ff054"}
 ```
 
@@ -310,9 +307,68 @@ flashbots simulateBundle $signedTxs
 
 Result:
 
-```txt
+```json
 Targeting block 14802588 for bundle simulation.
 {"bundleHash":"0x57b0f5e51b924a9d88a59b2d4f0c4fd2c26c80a130d982c9bc4e97d3001ff054","coinbaseDiff":{"type":"BigNumber","hex":"0x05db54a1c878e0"},"results":[{"coinbaseDiff":"824265710779504","ethSentToCoinbase":"0","fromAddress":"0x13babe07e11ff6f2276B97735131c867D793615b","gasFees":"824265710779504","gasPrice":"38924523554","gasUsed":21176,"toAddress":"0xeAa314Eb4Cc5A16458B17a94e759252f4FDA9eA4","txHash":"0x84809aa44167e877b4b95f74b4b7f022ce04114be0c37f39ca858c438abbfb75","value":"0x"},{"coinbaseDiff":"824265710779504","ethSentToCoinbase":"0","fromAddress":"0x13babe07e11ff6f2276B97735131c867D793615b","gasFees":"824265710779504","gasPrice":"38924523554","gasUsed":21176,"toAddress":"0xeAa314Eb4Cc5A16458B17a94e759252f4FDA9eA4","txHash":"0x5346ddf789eb33c2e0a07bacbc53cf3f0766608b50cefcea64684586a650b6aa","value":"0x"}],"totalGasUsed":42352}
+```
+
+### `sendPrivateTransaction`
+
+`sendPrivateTransaction` sends a single signed transaction to Flashbots. Flashbots will try to get the transaction included for a maximum of 25 blocks.
+
+```sh
+signedTx=0xf87080853010b872008a010d8894eaa314db4cc5a16458b17a94e759252a4fda9ea4808b6c6a7a792f77616e6b65721ba05bf41e534c768499a3a84567e9acca5fdec73164d54b0cd21e4cdd94a11af29ba0591f06662aa673b645378774ee4a665fdf8a7ec8e0418ec0ac0d24f915bc8526
+flashbots sendPrivateTransaction $signedTx
+```
+
+Result:
+
+```json
+{"transaction":{"signedTransaction":"0xf87080853010b872008a010d8894eaa314db4cc5a16458b17a94e759252a4fda9ea4808b6c6a7a792f77616e6b65721ba05bf41e534c768499a3a84567e9acca5fdec73164d54b0cd21e4cdd94a11af29ba0591f06662aa673b645378774ee4a665fdf8a7ec8e0418ec0ac0d24f915bc8526","hash":"0x1030b9b9c685b0c63543ce2b14d286b3dcc82852a9d3404e3f1aaaf5108bb73c","account":"0x0000000000092DD1482686a414A08e64fF1463C2","nonce":0}}
+```
+
+Send with options:
+
+```sh
+signedTx=0xf87080853010b872008a010d8894eaa314db4cc5a16458b17a94e759252a4fda9ea4808b6c6a7a792f77616e6b65721ba05bf41e534c768499a3a84567e9acca5fdec73164d54b0cd21e4cdd94a11af29ba0591f06662aa673b645378774ee4a665fdf8a7ec8e0418ec0ac0d24f915bc8526
+flashbots sendPrivateTransaction $signedTx --max-block-number 15161558 --simulation-timestamp 1658080039
+```
+
+Result:
+
+```json
+{"transaction":{"signedTransaction":"0xf87080853010b872008a010d8894eaa314db4cc5a16458b17a94e759252a4fda9ea4808b6c6a7a792f77616e6b65721ba05bf41e534c768499a3a84567e9acca5fdec73164d54b0cd21e4cdd94a11af29ba0591f06662aa673b645378774ee4a665fdf8a7ec8e0418ec0ac0d24f915bc8526","hash":"0x1030b9b9c685b0c63543ce2b14d286b3dcc82852a9d3404e3f1aaaf5108bb73c","account":"0x0000000000092DD1482686a414A08e64fF1463C2","nonce":0}}
+Waiting for inclusion...
+Private transaction successfully mined.
+```
+
+### `cancelPrivateTransaction`
+
+`cancelPrivateTransaction` cancels a pending private transaction.
+
+```sh
+txHash=0x1030b9b9c685b0c63543ce2b14d286b3dcc82852a9d3404e3f1aaaf5108bb73c
+flashbots cancelPrivateTransaction txHash
+```
+
+Result:
+
+```txt
+Transaction cancelled (0x1030b9b9c685b0c63543ce2b14d286b3dcc82852a9d3404e3f1aaaf5108bb73c)
+```
+
+## development
+
+### run local build
+
+```sh
+./bin/dev help
+```
+
+### publish new release
+
+```sh
+TODO: FILL THIS IN
 ```
 
 ## features
