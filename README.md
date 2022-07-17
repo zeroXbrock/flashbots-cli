@@ -380,9 +380,9 @@ TODO: FILL THIS IN
 - [x] `sendBundle`
 - [x] `simulateBundle`
 - [x] `uuid`
-- [ ] `sendPrivateTransaction`
+- [x] `sendPrivateTransaction`
   - [ ] fast mode option
-- [ ] `cancelPrivateTransaction`
+- [x] `cancelPrivateTransaction`
 - [ ] Goerli support
 - [ ] auto-complete
 - [ ] sign, simulate, & send unsigned txs
