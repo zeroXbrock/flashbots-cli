@@ -50,7 +50,7 @@ Here's an example using the hardhat 0 account:
 export FB_AUTH_SIGNER=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 
 # recommended: set permanently in your terminal's profile (I use zsh)
-echo 'FB_AUTH_SIGNER=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80' >> ~/.zshrc
+echo 'export FB_AUTH_SIGNER=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80' >> ~/.zshrc
 ```
 
 ```sh
