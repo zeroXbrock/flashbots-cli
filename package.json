@@ -17,7 +17,7 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
-    "@flashbots/ethers-provider-bundle": "^0.4.3",
+    "@flashbots/ethers-provider-bundle": "0.5.0",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-not-found": "^2.3.1",
