@@ -348,7 +348,7 @@ Private transaction successfully mined.
 
 ```sh
 txHash=0x1030b9b9c685b0c63543ce2b14d286b3dcc82852a9d3404e3f1aaaf5108bb73c
-flashbots cancelPrivateTransaction txHash
+flashbots cancelPrivateTransaction $txHash
 ```
 
 Result:

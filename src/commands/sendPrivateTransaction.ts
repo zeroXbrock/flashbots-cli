@@ -1,4 +1,4 @@
-import { FlashbotsBundleRawTransaction, FlashbotsPrivateTransaction, FlashbotsPrivateTransactionResponse, FlashbotsTransactionResolution, RelayResponseError } from '@flashbots/ethers-provider-bundle'
+import { FlashbotsBundleRawTransaction, FlashbotsPrivateTransactionResponse, FlashbotsTransactionResolution, RelayResponseError } from '@flashbots/ethers-provider-bundle'
 import { Command, Flags } from '@oclif/core'
 
 // lib

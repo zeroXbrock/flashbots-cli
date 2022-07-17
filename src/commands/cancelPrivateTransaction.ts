@@ -1,4 +1,3 @@
-import { RelayResponseError } from '@flashbots/ethers-provider-bundle'
 import { Command } from '@oclif/core'
 
 // lib
