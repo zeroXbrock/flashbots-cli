@@ -41,9 +41,21 @@ curl https://raw.githubusercontent.com/zeroXbrock/flashbots-cli/main/install.sh 
 
 ## use
 
+**It is strongly recommended** to set `FB_AUTH_SIGNER` in your environment to a private key you control. It's used to sign bundles, authenticate requests, and earn reputation with Flashbots. Earning reputation can put you in the high priority queue for bundle submissions.
+
+Here's an example using the hardhat 0 account:
+
+```sh
+# set in terminal per-session
+export FB_AUTH_SIGNER=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+# recommended: set permanently in your terminal's profile (I use zsh)
+echo 'export FB_AUTH_SIGNER=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80' >> ~/.zshrc
+```
+
 ```sh
 # flashbots
-# flashbots help
+# flashbots help [command]
 # flashbots --help
 
 flashbots help
@@ -260,7 +272,14 @@ Result:
 
 ### `getUserStats`
 
-`getUserStats` retrieves Flashbots reputation information about your account.
+`getUserStats` retrieves Flashbots reputation information about an account you control.
+
+```sh
+# using FB_AUTH_SIGNER from environment
+flashbots getUserStats
+```
+
+Optionally override your environment key:
 
 ```sh
 # Get user stats about hardhat account 0
@@ -277,9 +296,9 @@ Result:
 
 ### `sendBundle`
 
-`sendBundle` sends a bundle of raw signed transactions to flashbots. By default, we target the next available block (`getBlockNumber() + 1`) and sign the bundle with a random account.
+`sendBundle` sends a bundle of raw signed transactions to flashbots. By default, we target the next available block (`getBlockNumber() + 1`) and sign the bundle with the key at the environment variable FB_AUTH_SIGNER. If this variable is not set, a random key will be generated and used to send the bundle.
 
-To earn reputation for your bundles, make sure to set the `-a` (`--authSigner`) flag.
+See `flashbots help sendBundle` for optional settings.
 
 ```sh
 signedTxs='["0xf87009851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba026314be2b42cda8015133376447bd6ab93bc08d367fe7d1b57f270256f5e5e04a00595467676caa58aacc709a4c1c987cf2f18f10a527797c4730e23a320d034ce", "0xf8700a851010b8720083010d8894eaa314eb4cc5a16458b17a94e759252f4fda9ea4808b6c617a792077616e6b65721ba0ef7bdce42d5e3c8ef515d1afaafecd952ac1f2adc97f1c3a76807a0b9ac21784a03a5589f444cf5e5b09456ab599544ac6a6e831fd6a1e9c0b596db0a3cc085edb"]'

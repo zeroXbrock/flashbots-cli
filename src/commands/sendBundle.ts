@@ -18,7 +18,6 @@ export default class SendBundle extends Command {
   ]
 
   static flags = {
-    'auth-signer': Flags.string({char: 'a', description: 'Private key to sign bundle'}),
     'target-block': Flags.integer({char: 'b', description: 'Block to target for bundle submission (default latest+1)'}),
     'min-timestamp': Flags.integer({description: 'Minimum timestamp at which this bundle can be included'}),
     'max-timestamp': Flags.integer({description: 'Maximum timestamp at which this bundle can be included'}),
@@ -34,7 +33,7 @@ export default class SendBundle extends Command {
   public async run(): Promise<void> {
     const {args, flags} = await this.parse(SendBundle)
     
-    const flashbotsProvider = await getFlashbotsProvider(flags['auth-signer'])
+    const flashbotsProvider = await getFlashbotsProvider()
     
     let targetBlock: number;
     if (flags['target-block']) {
