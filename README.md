@@ -384,12 +384,6 @@ Transaction cancelled (0x1030b9b9c685b0c63543ce2b14d286b3dcc82852a9d3404e3f1aaaf
 ./bin/dev help
 ```
 
-### publish new release
-
-```sh
-TODO: FILL THIS IN
-```
-
 ## features
 
 - [x] `bundleCache`
