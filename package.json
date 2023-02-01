@@ -20,7 +20,7 @@
     "@flashbots/ethers-provider-bundle": "0.5.0",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-not-found": "^2.3.1",
+    "@oclif/plugin-not-found": "^2.3.17",
     "@oclif/plugin-warn-if-update-available": "^2.0.4",
     "axios": "^0.27.2",
     "ethers": "^5.6.6"
